@@ -74,8 +74,8 @@ public class BankJavaController{
     }
     private void listarContas(){
         System.out.println("Contas cadastradas:");
-        var contas = service.listarContasAbertas();
-        contas.stream().forEach(System.out::println);
+        //var contas = service.listarContasAbertas();
+        //contas.stream().forEach(System.out::println);
 
         System.out.println("Pressionequalquer tecla e de ENTER para voltar ao menu principal");
         teclado.next();
@@ -93,7 +93,7 @@ public class BankJavaController{
         System.out.println("Digite o email do cliente:");
         var email = teclado.next();
 
-        service.abrir(new DadosAberturaConta(numeroDaConta, new DadosCadastroCliente(nome, cpf, email)));
+        //service.abrir(new DadosAberturaConta(numeroDaConta, new DadosCadastroCliente(nome, cpf, email)));
 
         System.out.println("Conta aberta com sucesso!");
         System.out.println("Pressione qualquer tecla e de ENTER para voltar ao menu principal");
@@ -112,8 +112,8 @@ public class BankJavaController{
     private void consultarSaldo (){
         System.out.println("Digite o número da conta");
         var numeroDaConta = teclado.nextInt();
-        var saldo = service.consultarSaldo(numeroDaConta);
-        System.out.println("Saldo da conta: " +saldo);
+        //var saldo = service.consultarSaldo(numeroDaConta);
+        //System.out.println("Saldo da conta: " +saldo);
 
         System.out.println("Pressione qualquer tecla e de ENTER para voltar ao menu principal");
         teclado.next();
@@ -151,9 +151,9 @@ public class BankJavaController{
         System.out.println("Informe o valor a ser tranferido:");
         BigDecimal valor = teclado.nextBigDecimal();
 
-        this.service.realizaTranferencia(numeroContaOrigem, numeroContaDestino, valor);
+        //this.service.realizaTranferencia(numeroContaOrigem, numeroContaDestino, valor);
         System.out.println("Transferência realizada com sucesso!");
         System.out.println("Pressione qualquer tecla e de ENTER para voltar ao menu principal");
-        teclado next();
+        //teclado next();
     }
 }
